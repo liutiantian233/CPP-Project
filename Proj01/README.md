@@ -15,4 +15,14 @@ You forgot about complex numbers, didn't you. Well, Wikipedia is here to help. T
 Your program will do the following:
 
 1. Take as input four floating point values (in this order, as indicated):
+
    1. a real value and an imaginary value for the first complex number
+   2. a real value and an imaginary value for the second complex number
+
+2. Print the following four results: the sum, the difference, the product and the quotient of the 2 complex numbers. You will use **exactly** the following format:
+
+   1. Each result on a single line (thus 4 lines printed)
+   2. The precision is to two decimal point of accuracy (see note 1c below)
+   3. output looks like the following **exactly**: 1 + 2i that is, a float, a space, a plus Deliverables sign, a space, a float followed directly by the letter i
+
+## Deliverables
