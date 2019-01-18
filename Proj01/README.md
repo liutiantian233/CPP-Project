@@ -17,12 +17,15 @@ Your program will do the following:
 1. Take as input four floating point values (in this order, as indicated):
 
    1. a real value and an imaginary value for the first complex number
+   
    2. a real value and an imaginary value for the second complex number
 
 2. Print the following four results: the sum, the difference, the product and the quotient of the 2 complex numbers. You will use **exactly** the following format:
 
    1. Each result on a single line (thus 4 lines printed)
+   
    2. The precision is to two decimal point of accuracy (see note 1c below)
+   
    3. output looks like the following **exactly**: 1 + 2i that is, a float, a space, a plus Deliverables sign, a space, a float followed directly by the letter i
 
 ## Deliverables
@@ -53,17 +56,17 @@ Your program will do the following:
 
 2. The following statement will read two variables from the same, space separated line. It is an example of chaining input:
 
-```c
-double d1, d2;
-cin >> d1 >> d2;
-```
+   ```c
+   double d1, d2;
+   cin >> d1 >> d2;
+   ```
 
    You can also do it on separate lines. Your choice:
 
-```c
-cin >> d1;
-cin >> d2;
-```
+   ```c
+   cin >> d1;
+   cin >> d2;
+   ```
 
 3. If you read off of a single line of 4 space separated floating point numbers for the input, you can do a handy trick off the command line. You can redirect a file (containing that single line of space separated input) to your main program. With that file in the same directory as the compiled a.out, you can do:
 
