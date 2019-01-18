@@ -26,3 +26,11 @@ Your program will do the following:
    3. output looks like the following **exactly**: 1 + 2i that is, a float, a space, a plus Deliverables sign, a space, a float followed directly by the letter i
 
 ## Deliverables
+
+[Project01.cpp](https://github.com/liutiantian233/CPP-Project/blob/master/Proj01/proj01.cpp)
+
+## Feedback and suggestions
+- E-mail：<liutia20@msu.edu>
+
+---------
+Thanks for reading this help document
