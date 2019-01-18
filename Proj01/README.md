@@ -51,6 +51,13 @@ Your program will do the following:
    
    - Thus cout << setprecision(2) << fixed << 123.4567 << endl; **will print 123.46**
 
+2. The following statement will read two variables from the same, space separated line. It is an example of chaining input:
+
+```c
+double d1, d2;
+cin >> d1 >> d2;
+```
+
 ## Feedback and suggestions
 - E-mail：<liutia20@msu.edu>
 
