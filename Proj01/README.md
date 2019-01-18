@@ -67,9 +67,9 @@ cin >> d2;
 
 3. If you read off of a single line of 4 space separated floating point numbers for the input, you can do a handy trick off the command line. You can redirect a file (containing that single line of space separated input) to your main program. With that file in the same directory as the compiled a.out, you can do:
 
-```
-./a.out < fileOfInput.txt
-```
+   ```
+   ./a.out < fileOfInput.txt
+   ```
 
    This will automatically feed the input to the cin statement and produce the output. Makes it easier to test things, saves you from typing 4 numbers a lot.
 
