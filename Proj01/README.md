@@ -29,6 +29,10 @@ Your program will do the following:
 
 [Project01.cpp](https://github.com/liutiantian233/CPP-Project/blob/master/Proj01/proj01.cpp)
 
+## Assignment Notes
+
+1. We might as well try to make the output somewhat readable. You can look this up in the text or on the internet, but you can use the following modifiers that affect how numbers print.
+
 ## Feedback and suggestions
 - E-mail：<liutia20@msu.edu>
 
