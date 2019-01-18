@@ -15,4 +15,4 @@ You forgot about complex numbers, didn't you. Well, Wikipedia is here to help. T
 Your program will do the following:
 
 1. Take as input four floating point values (in this order, as indicated):
-a. a real value and an imaginary value for the first complex number
+   1. a real value and an imaginary value for the first complex number
