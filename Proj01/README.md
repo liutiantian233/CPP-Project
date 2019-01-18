@@ -54,9 +54,9 @@ Your program will do the following:
       
       **Provide the include and use setprecision(2) for this project.**
    
-   - Thus cout << setprecision(2) << fixed << 123.4567 << endl;
+   - Thus `cout << setprecision(2) << fixed << 123.4567 << endl;`
    
-   **will print 123.46**
+      **will print 123.46**
 
 2. The following statement will read two variables from the same, space separated line. It is an example of chaining input:
 
