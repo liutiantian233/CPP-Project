@@ -48,11 +48,14 @@ Your program will do the following:
    
       This is the precision of the operation. If there are more than two decimals after decimal point, this will round the output to two decimals. In combination with fixed, it will always print two decimals after the point.
    
+      ```
       #include<iomanip>
+      ```
       
       **Provide the include and use setprecision(2) for this project.**
    
-   - Thus cout << setprecision(2) << fixed << 123.4567 << endl; **will print 123.46**
+   - Thus cout << setprecision(2) << fixed << 123.4567 << endl;
+      **will print 123.46**
 
 2. The following statement will read two variables from the same, space separated line. It is an example of chaining input:
 
