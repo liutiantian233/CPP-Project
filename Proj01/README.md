@@ -35,17 +35,17 @@ Your program will do the following:
 
    1. **cout << fixed**
    
-   Elements will be printed as floating point numbers (ex 123.456). Use this for the project.
+      Elements will be printed as floating point numbers (ex 123.456). Use this for the project.
    
    2. **cout << scientific**
    
-   Elements will be printed in scientific notation (ex 1.23456 x 10^2 ). This is an alternative but **not what we want** for this project.
+      Elements will be printed in scientific notation (ex 1.23456 x 10^2 ). This is an alternative but **not what we want** for this project.
    
    3. **cout << setprecision(2)**
    
-   This is the precision of the operation. If there are more than two decimals after decimal point, this will round the output to two decimals. In combination with fixed, it will always print two decimals after the point.
+      This is the precision of the operation. If there are more than two decimals after decimal point, this will round the output to two decimals. In combination with fixed, it will always print two decimals after the point.
    
-   #include<iomanip>
+      #include<iomanip>
 
 ## Feedback and suggestions
 - E-mail：<liutia20@msu.edu>
