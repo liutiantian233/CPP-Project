@@ -75,6 +75,8 @@ This will automatically feed the input to the cin statement and produce the outp
 
 4. You can check your calculations on [wolframalpha](http://www.wolframalpha.com) or using python or some other approach that you are comfortable with. If wolframalpha, make sure you enclose the complex number in parens as in: (1 + 2i) + (1 + 2i)
 
+-----
+
 ## Feedback and suggestions
 - E-mail：<liutia20@msu.edu>
 
