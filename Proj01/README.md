@@ -33,6 +33,11 @@ Your program will do the following:
 
 1. We might as well try to make the output somewhat readable. You can look this up in the text or on the internet, but you can use the following modifiers that affect how numbers print.
 
+   1. **cout << fixed**
+   Elements will be printed as floating point numbers (ex 123.456). Use this for the project.
+   2. **cout << scientific**
+   
+
 ## Feedback and suggestions
 - E-mail：<liutia20@msu.edu>
 
