@@ -58,7 +58,7 @@ double d1, d2;
 cin >> d1 >> d2;
 ```
 
-You can also do it on separate lines. Your choice:
+   You can also do it on separate lines. Your choice:
 
 ```c
 cin >> d1;
@@ -71,7 +71,7 @@ cin >> d2;
 ./a.out < fileOfInput.txt
 ```
 
-This will automatically feed the input to the cin statement and produce the output. Makes it easier to test things, saves you from typing 4 numbers a lot.
+   This will automatically feed the input to the cin statement and produce the output. Makes it easier to test things, saves you from typing 4 numbers a lot.
 
 4. You can check your calculations on [wolframalpha](http://www.wolframalpha.com) or using python or some other approach that you are comfortable with. If wolframalpha, make sure you enclose the complex number in parens as in: (1 + 2i) + (1 + 2i)
 
