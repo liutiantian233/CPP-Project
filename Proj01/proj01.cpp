@@ -5,8 +5,8 @@ using std::setprecision;
 
 int main() {
   cout << fixed << setprecision(2);
-	float first1, first2, second1, second2, real, imag;
-	cin >> first1 >> first2 >> second1 >> second2;
+  float first1, first2, second1, second2, real, imag;
+  cin >> first1 >> first2 >> second1 >> second2;
   
   cout << first1 + second1 << " + " << first2 + second2 << "i" << endl;
   cout << first1 - second1 << " + " << first2 - second2 << "i" << endl;
