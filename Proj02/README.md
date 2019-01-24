@@ -48,8 +48,8 @@ If high is greater than or equal to low, on two separate lines you will print:
 cout << sqrt(16) << endl;  // result is 4
 ```
 
-1. You should check that the smallest (the first entered value) is indeed strictly smaller than the second (the second value). If not, the program prints the message Error (exactly that, capital E Error) and stops.
+1. You should check that the smallest (the first entered value) is indeed strictly smaller than the second (the second value). If not, the program prints the message **Error** (exactly that, capital E Error) and stops.
 
 2. If you ask for a large enough element, you might overflow an integer. If you go big enough, you will overflow a long (though it will take awhile).
 
-3. The floor function, when given an argument of a type double, returns a double. If you want to create a copy of a double as a long, use static_cast<long>(the_double).
+3. The **floor** function, when given an argument of a type **double**, returns a **double**. If you want to create a copy of a **double** as a **long**, use `static_cast<long>(the_double)`.
