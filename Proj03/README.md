@@ -51,6 +51,14 @@ If we were more knowledgeable about algorithms we could discuss how to be effici
 
 - You can check every number from 2 up to the n-1 and see if any of those numbers divides without remainder. If so, then it isn't prime. Otherwise it is.
   - you can be more efficient. What value do you really need to check up to (less than n-1)?
+  - **break** can save you some computational time here.
 
+### is_powerful:
 
+- First, no prime number is ever powerful.
+- Check every number from 2 to n-1.
+  - if it divides without remainder into n, then it is a factor.
+    - for all of those factors that are prime, then
+      - if the square of that factor also divides without remainder into n, it is a powerful number.
+    - otherwise not powerful.
 
