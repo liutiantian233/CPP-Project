@@ -29,3 +29,28 @@ A powerful number is an integer with the following property. For every prime fac
 
 [This link](https://en.wikipedia.org/wiki/Powerful_number) gives a list of powerful numbers.
 
+## Perfect Power
+
+A perfect power number is an integer that can be expressed as a single expression of the form m^k. That is, there is some **integer m** which, raised to the **integer power k**, is the **integer n** in question.
+
+## Functions
+
+**function**: is_prime: return is **bool**. Argument is a single **long n**. If n is prime it returns **true**, otherwise it returns **false**.
+
+**function**: is_powerful: return is **bool**. Argument is a single **long n**. If n is powerful it returns **true**, otherwise it returns **false**. Utilizes **is_prime** (or should).
+
+**function**: is_perfect_power: return is **bool**. Argument is a single **long n**. If n is a perfect power it returns **true**, otherwise it returns **false**.
+
+**function**: is_achilles: return is **bool**. Argument is a single **long n**. If n is an Achilles number it returns **true**, otherwise it returns **false**. Utilizes **is_powerful** and is **is_perfect_power** (or should).
+
+## Specific Hints
+
+If we were more knowledgeable about algorithms we could discuss how to be efficient about these checks, but for now we would just like them to work. Here are some pretty specific suggestions, but feel free to work it out for yourself.
+
+### is_prime:
+
+- You can check every number from 2 up to the n-1 and see if any of those numbers divides without remainder. If so, then it isn't prime. Otherwise it is.
+   - you can be more efficient. What value do you really need to check up to (less than n-1)?
+
+
+
