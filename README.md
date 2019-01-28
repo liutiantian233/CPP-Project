@@ -7,6 +7,8 @@ The Project 1 [Real and imaginary operations](https://github.com/liutiantian233/
 
 The Project 2 [Juggler sequence](https://github.com/liutiantian233/CPP-Project/tree/master/Proj02)
 
+The Project 3 [Achilles Number](https://github.com/liutiantian233/CPP-Project/tree/master/Proj03)
+
 ## Feedback and suggestions
 - E-mail：<liutia20@msu.edu>
 
