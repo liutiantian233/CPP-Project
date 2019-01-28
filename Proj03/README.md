@@ -50,7 +50,7 @@ If we were more knowledgeable about algorithms we could discuss how to be effici
 ### is_prime:
 
 - You can check every number from 2 up to the n-1 and see if any of those numbers divides without remainder. If so, then it isn't prime. Otherwise it is.
-   - you can be more efficient. What value do you really need to check up to (less than n-1)?
+  - you can be more efficient. What value do you really need to check up to (less than n-1)?
 
 
 
