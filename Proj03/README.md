@@ -62,3 +62,28 @@ If we were more knowledgeable about algorithms we could discuss how to be effici
       - if the square of that factor also divides without remainder into n, it is a powerful number.
     - otherwise not powerful.
 
+### is_perfect_power:
+
+There are a couple ways to approach:
+
+- check all combinations of base to some power that makes sense
+  - Outer loop goes from 2 to some limit. This is the base.
+  - Inner loop, raise base to power, powers start at 2. check 2^2, then 2^3, then 2^4 until the value exceeds the value of n. inner loop ends, check the next base: (3^2, 3^3, etc.)
+
+- check all the integer power roots
+  - check powers from 2 to some limit.
+  - find the various roots (square root, cube root, etc.) by taking the **pow (n, 1.0 / power)**.
+  - turn the root into an integer **(round in cmath is helpful)**.
+  - see if the now integer root raised to the power being checked is equal to n.
+
+### is_achilles:
+
+- if n is powerful but not a perfect power, then it is an Achilles number.
+
+-----
+
+## Feedback and suggestions
+- E-mail：<liutia20@msu.edu>
+
+---------
+Thanks for reading this help document
