@@ -14,6 +14,18 @@ We do this as follows. Each individual letter of the secret message is turned in
 
 ![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj05/proj05-1.png)
 
+The new message, with the encoded secret message would be (hard to write with autocorrect) "moM PLeaSe seNd MOrE MONey!". As we said, we can only capitalize letters so we ignore (don't count as one of the 5 letters) any other character in the plaintext message which just gets passed through unaltered.
+
+Reverse the process for decoding: take 5 letters from the encoded plaintext, ignoring any other characters, determine the binary string the capitalization indicates, and add the new letter that binary string represents as the next letter of the secret message.
+
+## Rules of the Process
+
+- we ignore non-alphabetic characters in the plaintext and pass them through to the encoded text as is.
+- we also ignore any non-alphabetic characters in the secret message. Those non-alphabetic characters will not be encoded. Thus spaces will be lost in decoding the secret message, as will any numbers of punctuation marks.
+- if there are "left over" letters in the plaintext, letters we do not require to encode a portion of the secret message) we just pass them through into the encoded text unchanged.
+- if there are not enough letters in the plaintext to encode the secret message, that is an error condition and we indicate as such and quit.
+- We mentioned that, if there are more letters than necessary to encode the secret message in the plaintext, then we just pass the "extra" letters through. On decoding that may create garbage at the end of our decoded message. That’s OK.
+
 -----
 
 ## Feedback and suggestions
