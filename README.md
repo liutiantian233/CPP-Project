@@ -9,7 +9,9 @@ The Project 2 [Juggler sequence](https://github.com/liutiantian233/CPP-Project/t
 
 The Project 3 [Achilles Number](https://github.com/liutiantian233/CPP-Project/tree/master/Proj03)
 
-The Project 3 [Number Classifier](https://github.com/liutiantian233/CPP-Project/tree/master/Proj04)
+The Project 4 [Number Classifier](https://github.com/liutiantian233/CPP-Project/tree/master/Proj04)
+
+The Project 5 [Steganography](https://github.com/liutiantian233/CPP-Project/tree/master/Proj05)
 
 ## Feedback and suggestions
 - E-mail：<liutia20@msu.edu>
