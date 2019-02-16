@@ -12,7 +12,7 @@ string lower_case(string s) {
     string str;
 
     for (char c : s)
-        str += std::to_string(tolower(c));
+        str += tolower(c);
 
     return str;
 }
