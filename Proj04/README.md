@@ -93,7 +93,9 @@ You will implement six functions.
 -----
 
 ## Feedback and suggestions
+
 - E-mail：<liutia20@msu.edu>
 
 ---------
+
 Thanks for reading this help document
