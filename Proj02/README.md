@@ -57,7 +57,9 @@ cout << sqrt(16) << endl;  // result is 4
 -----
 
 ## Feedback and suggestions
+
 - E-mail：<liutia20@msu.edu>
 
 ---------
+
 Thanks for reading this help document
