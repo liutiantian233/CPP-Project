@@ -1,4 +1,5 @@
 # CPP-Project
+
 My C++ Project with The Code
 
 -----
@@ -14,7 +15,9 @@ The Project 4 [Number Classifier](https://github.com/liutiantian233/CPP-Project/
 The Project 5 [Steganography](https://github.com/liutiantian233/CPP-Project/tree/master/Proj05)
 
 ## Feedback and suggestions
+
 - E-mail：<liutia20@msu.edu>
 
 ---------
+
 Thanks for reading this help document
