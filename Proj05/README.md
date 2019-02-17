@@ -71,7 +71,9 @@ As a note, you don't need a string to turn a letter into an index number. The in
 -----
 
 ## Feedback and suggestions
+
 - E-mail：<liutia20@msu.edu>
 
 ---------
+
 Thanks for reading this help document
