@@ -14,6 +14,8 @@ The Project 4 [Number Classifier](https://github.com/liutiantian233/CPP-Project/
 
 The Project 5 [Steganography](https://github.com/liutiantian233/CPP-Project/tree/master/Proj05)
 
+The Project 6 [Not Now](https://github.com/liutiantian233/CPP-Project/tree/master/Proj06)
+
 ## Feedback and suggestions
 
 - E-mail：<liutia20@msu.edu>
