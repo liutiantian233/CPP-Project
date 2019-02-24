@@ -34,7 +34,7 @@ index 13 is row = 13 / 5 --> 2, column 13 % 5 --> 3
 
 Each of the functions below is doing calculations on a 2D vector using a 1D vector as the underlying parameter that is passed. The parameters are passed as **const** references: references to prevent copying but **const** to prevent modification of the parameter.
 
-**`ostream& print_vector(const vector<long>&, ostream&);`**
+**`ostream& print_vector(const vector<long>& v, ostream& out);`**
 
 print the vector to the provided stream, returning that stream. Each element of the vector is separated from the next by a comma, no comma after the last element. You print out to the provide ostream, **not cout**!
 
