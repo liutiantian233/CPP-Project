@@ -16,7 +16,7 @@ The Project 5 [Steganography](https://github.com/liutiantian233/CPP-Project/tree
 
 The Project 6 [Vector](https://github.com/liutiantian233/CPP-Project/tree/master/Proj06)
 
-The Project 7 []()
+The Project 7 [NONE](https://github.com/liutiantian233/CPP-Project/tree/master/Proj07)
 
 ## Feedback and suggestions
 
