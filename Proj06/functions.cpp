@@ -1,10 +1,34 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Computer Project #06   Vector
+//
+//  Define the head File "iostream" and "vector"
+//    use the C++ Standard Library headers
+//    the vector is vector tools
+//
+//  Defining function:
+//    print_vector, four_corner_sum, column_order, rotate_rows_up, matrix_ccw_rotate, max_column_diff
+//
+//    lower_case: returns the lower case version of the input string s.
+//    to_binary: returns 5 bit string that is the index of the character argument.
+//    from_binary: returns the character that the 5 bit binary string bit_str represents.
+//    check_message: returns true if there are at least 5x the count of characters in secret_message as in plaintext.
+//    encode: plaintext and secret_message should be converted to lower case by lower_case.
+//    decode: returns the original secret_message as a string.
+//
+//  Defining main function:
+//    use the all function and switch case statement.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// whatever includes you need
 #include "proj06.h"
 
-#include <iostream>
-using std::ostream;
+#include <iostream>  // the head File
+using std::ostream;  // C++ STL
 
-#include <vector>
-using std::vector;
+#include <vector>  // the head File
+using std::vector;  // C++ STL
 
 ostream& print_vector(const vector<long>& v, ostream& out) {
 
