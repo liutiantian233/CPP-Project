@@ -36,8 +36,10 @@ ostream& print_vector(ostream &out, const vector<string> &v) {
 string clean_word(const string& s) {
     string str;
     for (auto c : s) {
-        if (isalpha(c))
-            str += tolower(c);
+        if (isalpha(c)) {
+            char ch = static_cast<char>(tolower(c));
+            str += ch;
+        }
     }
     return str;
 }
