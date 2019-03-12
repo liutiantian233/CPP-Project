@@ -53,37 +53,37 @@ a different value then found with Jaccard
 
 # Program Specifications
 
-**`ostream& print_vector (ostream &out, const vector<string> &v);`**
+**`ostream& print_vector(ostream &out, const vector<string> &v);`**
 
 print the contents of the vector `<string>` to the parameter ostream. Return the ostream used.
 
-**`string clean_word (const string&);`**
+**`string clean_word(const string&);`**
 
 Take in a string. Create a new string where you remove any non-alphabetic characters and lower case everything. Return that new string.
 
-**`vector<string> split (const string &s, char delim = ' ');`**
+**`vector<string> split(const string &s, char delim = ' ');`**
 
 Take in the string, return a vector where the string is split by the parameter character **delim**. Note the default is only provided in the header, not the definitions.
 
-**`bool process_words (map_type&, string);`**
+**`bool process_words(map_type&, string);`**
 
 Takes in an empty map and a string representing a file name. The function opens the file, reads the file one line at a time, splits the line, cleans each word and then records it in the map where the key of the map is the string and the value of the map is how many times that string occurred.
 
 **Error**: if the file represented by the string cannot be opened, the function returns false and makes no changes to the map. Otherwise the map is updated as indicated and the function returns true.
 
-**`ostream& print_map (ostream& out, const map_type& m);`**
+**`ostream& print_map(ostream& out, const map_type& m);`**
 
 Like print_vector above, print the contents of the map to the parameter ostream. Return the ostream used.
 
-**`double jaccard_similarity (const map_type &m1, const map_type &m2);`**
+**`double jaccard_similarity(const map_type &m1, const map_type &m2);`**
 
 Takes in two maps (representing the result of **process_words** on two documents). Using **only the keys** it calculates the jaccard similarity as described. Returns the similarity.
 
-**`double calc_norm_factor (const map_type &m1);`**
+**`double calc_norm_factor(const map_type &m1);`**
 
 For a map created by **process_words**, calculate the norm factor of the map / document as shown above (the square root of the frequencies squared). Return the norm factor.
 
-**`double cosine_similarity_tf (const map_type &m1, const map_type &m2);`**
+**`double cosine_similarity_tf(const map_type &m1, const map_type &m2);`**
 
 Calculate the term frequency cosine similarity for two maps created by **process_words** as described above. Return the similarity.
 
