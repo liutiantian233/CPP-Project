@@ -1,4 +1,4 @@
-# **friend** designation
+# friend designation
 
 It is a push, not a pull. (True)
 
