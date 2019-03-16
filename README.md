@@ -18,6 +18,8 @@ The Project 6 [Vector](https://github.com/liutiantian233/CPP-Project/tree/master
 
 The Project 7 [Document Similarity](https://github.com/liutiantian233/CPP-Project/tree/master/Proj07)
 
+The Project 8 [NONE](https://github.com/liutiantian233/CPP-Project/tree/master/Proj08)
+
 ## Feedback and suggestions
 
 - E-mail：<liutia20@msu.edu>
