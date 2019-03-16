@@ -22,6 +22,16 @@ clears any errors, resets cin to be good (False)
 
 closes the cin stream (False)
 
+## `cin.ignore(100)`
+
+ignore all input from cin except for the value 100 (False)
+
+prevent cin from getting the value 100 from the input stream (False)
+
+empty the cin buffer of 100 inputs stored there (True)
+
+stop input for the next 100 milliseconds (False)
+
 # C++ map STL container
 
 it is a sequence (False)
@@ -29,6 +39,16 @@ it is a sequence (False)
 it consists only of a series of keys (False)
 
 requires a single template type to make a variable of type map (False)
+
+## not method of map
+
+find (False)
+
+size (False)
+
+push_front (True)
+
+count (False)
 
 # operator *
 
@@ -98,6 +118,8 @@ it has a name (False)
 
 it can not be used in a generic algorithm (False)
 
+is commonly used as part of a generic algorithm (True)
+
 # templated function
 
 it is itself not a function, but a way to create a function (True)
@@ -157,3 +179,39 @@ transform (False)
 sort (False)
 
 accumulate (True)
+
+# proper interpretation var1 -> y
+
+return the data member y of var1 (False)
+
+dereference the pointer var1 and return its data member y (True)
+
+dereference the pointer y and return its value (False)
+
+set var1 to y (False)
+
+# string::npos
+
+it is the maximum number of positions in a string (False)
+
+in a substring operation, it signifies from the beginning of the string (False)
+
+it is returned when a find operation fails on a string (True)
+
+# constitutes to conversion for class named MyClass
+
+MyClass(string) (True)
+
+MyClass(long, long) (False)
+
+MyClass(MyClass&) (False)
+
+# commands allocates dynamic memory during program runtime
+
+copy (False)
+
+add (False)
+
+create (False)
+
+new (True)
