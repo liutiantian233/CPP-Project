@@ -1,4 +1,4 @@
-# friend designation
+# `friend` designation
 
 it is a push, not a pull (True)
 
@@ -36,7 +36,7 @@ stop input for the next 100 milliseconds (False)
 
 it is a sequence (False)
 
-it consists only of a series of keys (False)
+it consists **only** of a series of keys (False)
 
 requires a single template type to make a variable of type map (False)
 
