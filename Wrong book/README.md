@@ -1,10 +1,10 @@
 # friend designation
 
-It is a push, not a pull. (True)
+it is a push, not a pull (True)
 
-It indicates permission to access private class elements. 表示访问私有类元素的权限 (True)
+it indicates permission to access private class elements 表示访问私有类元素的权限 (True)
 
-It can apply to both a class and a function. (True)
+it can apply to both a class and a function (True)
 
 # difference capacity and size in vector
 
@@ -40,11 +40,11 @@ as a unary operation it represents de-reference (True)
 
 # special variable `this`
 
-you can directly assign it a new value in a class method (False)
+you can **directly** assign it a new value in a class method (False)
 
-It is automatically set by C++ to the address of the calling variable (True)
+it is automatically set by C++ to the address of the calling variable (True)
 
-It is an integer type (False)
+it is an integer type (False)
 
 # C++ random numbers
 
