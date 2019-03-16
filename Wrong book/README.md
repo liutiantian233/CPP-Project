@@ -38,6 +38,12 @@ in a declaration it represents a pointer type (True)
 
 as a unary operation it represents de-reference (True)
 
+in the expression 1 * 2 it represents multiplication (True)
+
+in the declaration long * p it represents dereferencing of a pointer (False)
+
+in cout << * p, the * represents the creation of a pointer variable p (False)
+
 # special variable `this`
 
 you can **directly** assign it a new value in a class method (False)
@@ -53,3 +59,101 @@ they generate the same sequence when starting from the same seed (True)
 when used in conjunction with a distribution, the distribution uses the random number generator as an argument (True)
 
 C++ has multiple versions of random number generators (True)
+
+# constructor
+
+## about C++ constructors
+
+they have the same name as the struct in which they are contained (True)
+
+they return the newly made element of the struct type (False)
+
+they can not take any arguments (False)
+
+they can not be defined inside of a struct (False)
+
+they require a return statement to return newly made struct type (False)
+
+they can be overloaded for different parameter lists (True)
+
+## designation on a constructor ( = default)
+
+over-rides **all** user-provided constructors to use only the synthesized constructor (False)
+
+sets the permissions of private data members to public (False)
+
+for the default constructor, use the synthesized constructor (True)
+
+# lambda function
+
+it is a nameless function (True)
+
+they are often used in conjunction with STL algorithms (True)
+
+they have a capture list (True)
+
+it is a function and can be invoked like a function (True)
+
+it has a name (False)
+
+it can not be used in a generic algorithm (False)
+
+# templated function
+
+it is itself not a function, but a way to create a function (True)
+
+it contains the keyword template (True)
+
+it makes use of a template parameter to represent a calling type (True)
+
+# about function parameter which is both a const and a reference
+
+a copy is made of that parameter when the function is invoked (False)
+
+you can not change the parameter inside the function (True)
+
+it only works with pointer types (False)
+
+# C++ functions
+
+you can not have more than one function with the same name (False)
+
+a function must have at least one parameter (False)
+
+uses the types of the parameters and return value to differentiate functions with the same name (True)
+
+the first parameter of a function does not require any type information (False)
+
+# STL iterators
+
+you can treat them as if they were pointers (True)
+
+you can not use them in conjunction with an STL container (False)
+
+iterators are not templated elements (False)
+
+# methods
+
+a method can be part of a `struct` (True)
+
+it is called in the context of an object using a dot call (True)
+
+in calling a method the `this` pointer is assigned by the compiler (True)
+
+# m of type `map<string,long>`
+
+m has no order to its elements (False)
+
+m[abc] = 2 assigns the value 2 to the key abc (True)
+
+cout << m is a legal operation (False)
+
+# algorithms to multiply
+
+copy (False)
+
+transform (False)
+
+sort (False)
+
+accumulate (True)
