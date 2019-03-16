@@ -54,7 +54,11 @@ count (False)
 
 as a binary operation it represents multiply (True)
 
+as a unary operation it represents size_of (False)
+
 in a declaration it represents a pointer type (True)
+
+in a declaration it represents a reference type (False)
 
 as a unary operation it represents de-reference (True)
 
@@ -71,6 +75,12 @@ you can **directly** assign it a new value in a class method (False)
 it is automatically set by C++ to the address of the calling variable (True)
 
 it is an integer type (False)
+
+the programmer can **directly** assign it a new value in a class method (False)
+
+the programmer must set it to use it in a class method (False)
+
+it is a pointer type (True)
 
 # C++ random numbers
 
@@ -162,6 +172,14 @@ it is called in the context of an object using a dot call (True)
 
 in calling a method the `this` pointer is assigned by the compiler (True)
 
+## `explicit` designation
+
+used to prevent implicit conversion (True)
+
+indicates permission to access private class elements (False)
+
+method spelling must be explicit (False)
+
 # m of type `map<string,long>`
 
 m has no order to its elements (False)
@@ -169,6 +187,16 @@ m has no order to its elements (False)
 m[abc] = 2 assigns the value 2 to the key abc (True)
 
 cout << m is a legal operation (False)
+
+## type returned by insert
+
+long (False)
+
+long& (False)
+
+string (False)
+
+bool (False)
 
 # algorithms to multiply
 
@@ -215,3 +243,11 @@ add (False)
 create (False)
 
 new (True)
+
+# C++ exceptions
+
+potential elements that might throw are wrapped in a try block (True)
+
+if an error is thrown, control moves to the catch block of the same error type (True)
+
+an uncaught exception will halt the program (True)
