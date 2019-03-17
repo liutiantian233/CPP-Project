@@ -104,3 +104,14 @@
 - it is itself not a function, but a way to create a function
 - it contains the keyword `template`
 - it makes use of a template parameter to represent a calling type
+
+# about function parameter which is both a const and a reference
+
+**True**
+
+- you can not change the parameter inside the function
+
+**False**
+
+- a copy is made of that parameter when the function is invoked
+- it only works with pointer types
