@@ -67,3 +67,17 @@ in the expression 1 * 2 it represents multiplication (True)
 in the declaration long * p it represents dereferencing of a pointer (False)
 
 in cout << * p, the * represents the creation of a pointer variable p (False)
+
+# special variable `this`
+
+you can **directly** assign it a new value in a class method (False)
+
+it is automatically set by C++ to the address of the calling variable (True)
+
+it is an integer type (False)
+
+the programmer can **directly** assign it a new value in a class method (False)
+
+the programmer must set it to use it in a class method (False)
+
+it is a pointer type (True)
