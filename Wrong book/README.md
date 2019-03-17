@@ -147,3 +147,14 @@
 
 - you can not use them in conjunction with an STL container
 - iterators are not templated elements
+
+# `m` of type `map<string, long>`
+
+**True**
+
+- `m["abc"] = 2` assigns the value 2 to the key `"abc"`
+
+**False**
+
+- `m` has no order to its elements
+- `cout << m` is a legal operation
