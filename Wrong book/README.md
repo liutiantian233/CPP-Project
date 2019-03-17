@@ -115,3 +115,15 @@
 
 - a copy is made of that parameter when the function is invoked
 - it only works with pointer types
+
+# C++ functions
+
+**True**
+
+- uses the types of the parameters and return value to differentiate functions with the same name
+
+**False**
+
+- you can not have more than one function with the same name
+- a function must have at least one parameter
+- the first parameter of a function does not require any type information
