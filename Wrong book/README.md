@@ -229,3 +229,15 @@
 
 - `MyClass(long, long)`
 - `MyClass(MyClass&)`
+
+# commands allocates dynamic memory during program runtime
+
+**True**
+
+- new
+
+**False**
+
+- copy
+- add
+- create
