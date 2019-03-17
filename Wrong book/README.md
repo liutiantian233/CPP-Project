@@ -11,3 +11,15 @@
 **size** is how many elements are in the vector
 
 **capacity** is how many it **could** hold before growing
+
+# `cin.ignore` method
+
+**True**
+
+- removes characters from the input stream
+
+**False**
+
+- ignores the last cin operation
+- clears any errors, resets cin to be good
+- closes the cin stream
