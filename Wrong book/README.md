@@ -158,3 +158,15 @@
 
 - `m` has no order to its elements
 - `cout << m` is a legal operation
+
+# algorithms to multiply in `vector<long>`
+
+**True**
+
+- accumulate
+
+**False**
+
+- copy
+- transform
+- sort
