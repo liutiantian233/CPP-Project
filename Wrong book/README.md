@@ -81,3 +81,11 @@ the programmer can **directly** assign it a new value in a class method (False)
 the programmer must set it to use it in a class method (False)
 
 it is a pointer type (True)
+
+# C++ random numbers
+
+they generate the same sequence when starting from the same seed (True)
+
+when used in conjunction with a distribution, the distribution uses the random number generator as an argument (True)
+
+C++ has multiple versions of random number generators (True)
