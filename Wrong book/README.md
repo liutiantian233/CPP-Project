@@ -277,3 +277,11 @@
 - potential elements that might throw are wrapped in a try block
 - if an error is thrown, control moves to the catch block of the same error type
 - an uncaught exception will halt the program
+
+# about generic algorithms
+
+**True**
+
+- they use iterators to work with a container
+- they must be templated to work with the container type
+- they are often not very efficient, but they are convenient
