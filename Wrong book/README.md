@@ -86,6 +86,7 @@
 - they are often used in conjunction with STL algorithms
 - they have a capture list
 - it is a function and can be invoked like a function
+- is commonly used as part of a generic algorithm
 
 **False**
 
