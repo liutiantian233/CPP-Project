@@ -241,3 +241,14 @@
 - copy
 - add
 - create
+
+# `explicit` designation on method
+
+**True**
+
+- used to prevent implicit conversion
+
+**False**
+
+- indicates permission to access private class elements
+- method spelling must be explicit
