@@ -32,22 +32,6 @@
 - it consists **only** of a series of keys
 - requires a single template type to make a variable of type `map`
 
-# operator *
-
-**True**
-
-- as a binary operation it represents multiply
-- in a declaration it represents a pointer type
-- as a unary operation it represents dereference
-- in the expression `1 * 2` it represents multiplication
-
-**False**
-
-- in the declaration `long* p` it represents dereferencing of a pointer
-- in `cout << *p`, the * represents the creation of a pointer variable p
-- as a unary operation it represents size_of
-- in a declaration it represents a reference type
-
 # special variable `this`
 
 **True**
@@ -59,8 +43,7 @@
 
 - you can **directly** assign it a new value in a class method
 - it is an integer type
-- the programmer can **directly** assign it a new value in a class method
-- the programmer must set it to use it in a class method
+- must set it to use it in a class method
 
 # random numbers
 
