@@ -85,3 +85,14 @@
 - it is a nameless function
 - they are often used in conjunction with STL algorithms
 - they have a capture list
+
+# about C++ constructors
+
+**True**
+
+- they have the same name as the struct in which they are contained
+
+**False**
+
+- they return the newly made element of the struct type
+- they can not take any arguments
