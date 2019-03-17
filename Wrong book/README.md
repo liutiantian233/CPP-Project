@@ -122,7 +122,7 @@
 
 **False**
 
-- they return the newly made element of the struct type
+- they `return` the newly made element of the `struct` type
 - they can not take any arguments
 - they can not be defined inside of a `struct`
 - they require a `return` statement to return newly made `struct` type
