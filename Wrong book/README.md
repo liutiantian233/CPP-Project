@@ -23,3 +23,11 @@
 - ignores the last cin operation
 - clears any errors, resets cin to be good
 - closes the cin stream
+
+# C++ `map` STL container
+
+**False**
+
+- it is a sequence
+- it consists **only** of a series of keys
+- requires a single template type to make a variable of type `map`
