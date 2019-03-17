@@ -78,13 +78,19 @@
 - over-rides **all** user provided constructors to use only the synthesized constructor
 - sets the permissions of private data members to public
 
-# lambda function
+# `lambda` function
 
 **True**
 
 - it is a nameless function
 - they are often used in conjunction with STL algorithms
 - they have a capture list
+- it is a function and can be invoked like a function
+
+**False**
+
+- it has a name
+- it can not be used in a generic algorithm
 
 # about C++ constructors
 
