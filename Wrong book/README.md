@@ -60,6 +60,12 @@
 - as a binary operation it represents multiply
 - in a declaration it represents a pointer type
 - as a unary operation it represents dereference
+- in the expression `1 * 2` it represents multiplication
+
+**False**
+
+- in the declaration `long* p` it represents dereferencing of a pointer
+- in `cout << *p`, the * represents the creation of a pointer variable `p`
 
 # designation on constructor ( = default)
 
@@ -71,3 +77,11 @@
 
 - over-rides **all** user provided constructors to use only the synthesized constructor
 - sets the permissions of private data members to public
+
+# lambda function
+
+**True**
+
+- it is a nameless function
+- they are often used in conjunction with STL algorithms
+- they have a capture list
