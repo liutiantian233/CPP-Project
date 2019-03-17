@@ -31,3 +31,21 @@ prevent cin from getting the value 100 from the input stream (False)
 empty the cin buffer of 100 inputs stored there (True)
 
 stop input for the next 100 milliseconds (False)
+
+# C++ map STL container
+
+it is a sequence (False)
+
+it consists **only** of a series of keys (False)
+
+requires a single template type to make a variable of type map (False)
+
+## not method of map
+
+find (False)
+
+size (False)
+
+push_front (True)
+
+count (False)
