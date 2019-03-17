@@ -207,3 +207,14 @@
 - ignore all input from cin except for the value 100
 - prevent cin from getting the value 100 from the input stream
 - stop input for the next 100 milliseconds
+
+# `string::npos`
+
+**True**
+
+- it is returned when a find operation fails on a string
+
+**False**
+
+- it is the maximum number of positions in a string
+- in a substring operation, it signifies from the beginning of the string
