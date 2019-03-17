@@ -52,3 +52,11 @@
 - they generate the same sequence when starting from the same seed
 - when used in conjunction with a distribution, the distribution uses the random number generator as an argument
 - C++ has multiple versions of random number generators
+
+# operator *
+
+**True**
+
+- as a binary operation it represents multiply
+- in a declaration it represents a pointer type
+- as a unary operation it represents dereference
