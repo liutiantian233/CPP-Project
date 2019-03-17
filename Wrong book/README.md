@@ -89,3 +89,27 @@ they generate the same sequence when starting from the same seed (True)
 when used in conjunction with a distribution, the distribution uses the random number generator as an argument (True)
 
 C++ has multiple versions of random number generators (True)
+
+# constructor
+
+## about C++ constructors
+
+they have the same name as the struct in which they are contained (True)
+
+they return the newly made element of the struct type (False)
+
+they can not take any arguments (False)
+
+they can not be defined inside of a struct (False)
+
+they require a return statement to return newly made struct type (False)
+
+they can be overloaded for different parameter lists (True)
+
+## designation on a constructor ( = default)
+
+over-rides **all** user-provided constructors to use only the synthesized constructor (False)
+
+sets the permissions of private data members to public (False)
+
+for the default constructor, use the synthesized constructor (True)
