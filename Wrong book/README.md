@@ -183,3 +183,15 @@
 - copy
 - transform
 - sort
+
+# proper interpretation `var1 -> y`
+
+**True**
+
+- dereference the pointer `var1` and return its data member `y`
+
+**False**
+
+- return the data member `y` of `var1`
+- dereference the pointer `y` and return its value
+- set var1 to y
