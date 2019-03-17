@@ -60,3 +60,14 @@
 - as a binary operation it represents multiply
 - in a declaration it represents a pointer type
 - as a unary operation it represents dereference
+
+# designation on constructor ( = default)
+
+**True**
+
+- for the default constructor, use the synthesized constructor
+
+**False**
+
+- over-rides **all** user provided constructors to use only the synthesized constructor
+- sets the permissions of private data members to public
