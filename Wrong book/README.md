@@ -261,3 +261,11 @@
 - long&
 - string
 - bool
+
+# C++ exceptions
+
+**True**
+
+- potential elements that might throw are wrapped in a try block
+- if an error is thrown, control moves to the catch block of the same error type
+- an uncaught exception will halt the program
