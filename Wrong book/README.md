@@ -90,9 +90,7 @@ when used in conjunction with a distribution, the distribution uses the random n
 
 C++ has multiple versions of random number generators (True)
 
-# constructor
-
-## about C++ constructors
+# about C++ constructors
 
 they have the same name as the struct in which they are contained (True)
 
