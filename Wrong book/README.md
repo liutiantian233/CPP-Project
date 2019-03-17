@@ -54,13 +54,13 @@ count (False)
 
 as a binary operation it represents multiply (True)
 
-as a unary operation it represents size_of (False)
-
 in a declaration it represents a pointer type (True)
 
 in a declaration it represents a reference type (False)
 
 as a unary operation it represents de-reference (True)
+
+as a unary operation it represents size_of (False)
 
 in the expression 1 * 2 it represents multiplication (True)
 
@@ -114,7 +114,7 @@ sets the permissions of private data members to public (False)
 
 for the default constructor, use the synthesized constructor (True)
 
-# lambda function
+# `lambda` function
 
 it is a nameless function (True)
 
