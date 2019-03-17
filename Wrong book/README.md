@@ -47,3 +47,17 @@
 - in `cout << *p`, the * represents the creation of a pointer variable p
 - as a unary operation it represents size_of
 - in a declaration it represents a reference type
+
+# special variable `this`
+
+**True**
+
+- it is automatically set by C++ to the address of the calling variable
+- it is a pointer type
+
+**False**
+
+- you can **directly** assign it a new value in a class method
+- it is an integer type
+- the programmer can **directly** assign it a new value in a class method
+- the programmer must set it to use it in a class method
