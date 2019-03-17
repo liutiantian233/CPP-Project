@@ -218,3 +218,14 @@
 
 - it is the maximum number of positions in a string
 - in a substring operation, it signifies from the beginning of the string
+
+# constitutes to conversion for class named `MyClass`
+
+**True**
+
+- `MyClass(string)`
+
+**False**
+
+- `MyClass(long, long)`
+- `MyClass(MyClass&)`
