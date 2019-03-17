@@ -216,6 +216,18 @@
 - prevent cin from getting the value 100 from the input stream
 - stop input for the next 100 milliseconds
 
+# `cin.clean()`
+
+**True**
+
+- it closes the `cin` stream
+
+**False**
+
+- it removes all characters from the input stream
+- it undoes the last input operation
+- it clears any errors, resets `cin` to be good
+
 # `string::npos`
 
 **True**
