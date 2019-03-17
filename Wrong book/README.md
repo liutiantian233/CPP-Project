@@ -97,11 +97,14 @@
 **True**
 
 - they have the same name as the struct in which they are contained
+- they can be overloaded for different parameter lists
 
 **False**
 
 - they return the newly made element of the struct type
 - they can not take any arguments
+- they can not be defined inside of a `struct`
+- they require a `return` statement to return newly made `struct` type
 
 # templated function
 
