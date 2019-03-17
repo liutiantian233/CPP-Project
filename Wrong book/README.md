@@ -49,3 +49,21 @@ size (False)
 push_front (True)
 
 count (False)
+
+# operator *
+
+as a binary operation it represents multiply (True)
+
+as a unary operation it represents size_of (False)
+
+in a declaration it represents a pointer type (True)
+
+in a declaration it represents a reference type (False)
+
+as a unary operation it represents de-reference (True)
+
+in the expression 1 * 2 it represents multiplication (True)
+
+in the declaration long * p it represents dereferencing of a pointer (False)
+
+in cout << * p, the * represents the creation of a pointer variable p (False)
