@@ -103,3 +103,11 @@ they can not be defined inside of a struct (False)
 they require a return statement to return newly made struct type (False)
 
 they can be overloaded for different parameter lists (True)
+
+# designation on a constructor ( = default)
+
+over-rides **all** user-provided constructors to use only the synthesized constructor (False)
+
+sets the permissions of private data members to public (False)
+
+for the default constructor, use the synthesized constructor (True)
