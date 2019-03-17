@@ -32,6 +32,14 @@
 - it consists **only** of a series of keys
 - requires a single template type to make a variable of type `map`
 
+# C++ container `map` is ordered about `map`
+
+**True**
+
+- order is based on the keys of the elements
+- the key must respond to the `<` operator
+- the key is const
+
 # not method of `map`
 
 **True**
