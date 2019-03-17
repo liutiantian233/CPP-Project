@@ -252,3 +252,12 @@
 
 - indicates permission to access private class elements
 - method spelling must be explicit
+
+# type returned by `map<long, string> insert`
+
+**False**
+
+- long
+- long&
+- string
+- bool
