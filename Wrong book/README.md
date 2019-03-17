@@ -127,3 +127,14 @@
 - you can not have more than one function with the same name
 - a function must have at least one parameter
 - the first parameter of a function does not require any type information
+
+# STL iterators
+
+**True**
+
+- you can treat them as if they were pointers
+
+**False**
+
+- you can not use them in conjunction with an STL container
+- iterators are not templated elements
