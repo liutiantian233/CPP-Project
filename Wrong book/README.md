@@ -195,3 +195,15 @@
 - return the data member `y` of `var1`
 - dereference the pointer `y` and return its value
 - set var1 to y
+
+# `cin.ignore(100)`
+
+**True**
+
+- empty the cin buffer of 100 inputs stored there
+
+**False**
+
+- ignore all input from cin except for the value 100
+- prevent cin from getting the value 100 from the input stream
+- stop input for the next 100 milliseconds
