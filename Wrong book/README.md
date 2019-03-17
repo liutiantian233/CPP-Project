@@ -96,3 +96,11 @@
 
 - they return the newly made element of the struct type
 - they can not take any arguments
+
+# templated function
+
+**True**
+
+- it is itself not a function, but a way to create a function
+- it contains the keyword `template`
+- it makes use of a template parameter to represent a calling type
