@@ -32,6 +32,18 @@
 - it consists **only** of a series of keys
 - requires a single template type to make a variable of type `map`
 
+# not method of `map`
+
+**True**
+
+- push_front
+
+**False**
+
+- find
+- size
+- count
+
 # special variable `this`
 
 **True**
