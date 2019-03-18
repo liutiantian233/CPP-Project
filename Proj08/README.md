@@ -65,3 +65,7 @@ These operations are represented by a small matrix, called the kernel or convolu
 In row order of the mask, we get the equation:
 
 ![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-4.png)
+
+The new pixel in the new image at the same location of the old pixel will have the value 488. But wait! 488 is larger than the `max_gray` we indicated in the file. So that new pixel's value gets reset to the `max_gray`, 245. If the calculated new pixel had been less than 0, we would have set it to 0.
+
+We do this for every pixel, calculating a new pixel value based on the old pixel's neighbors and a convolution mask. The result is a new image. You can imagine sliding the mask along the original image one pixel at a time, doing the calculation and then generating a new pixel in a new image. A great web site that demonstrates this process is [link](http://setosa.io/ev/image-kernels/). Take a look!
