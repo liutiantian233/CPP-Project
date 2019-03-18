@@ -39,3 +39,7 @@ A PGM file is a text file with a fairly simple format (see [link](https://en.wik
   - clearly, comments are ignored.
 - separators can be white space, line feeds, stuff that is normal for C++ input.
 - I have seen recommendations that no line should be more than 70 chars wide, but I have personally written out pgm images that are `512 * 512` and wrote each row as a single line without any issue. For this project, each row of the image should be written on a single line.
+
+Here is an example.
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-1.png)
