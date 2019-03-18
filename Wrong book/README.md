@@ -297,3 +297,14 @@
 - they use iterators to work with a container
 - they must be templated to work with the container type
 - they are often not very efficient, but they are convenient
+
+# about methods
+
+**True**
+
+- a method can be part of a `struct`
+- it is called in the context of an object using a dot call
+
+**False**
+
+- in calling a method the this pointer is assigned by the compiler
