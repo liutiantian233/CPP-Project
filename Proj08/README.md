@@ -43,3 +43,11 @@ A PGM file is a text file with a fairly simple format (see [link](https://en.wik
 Here is an example.
 
 ![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-1.png)
+
+It is a very small image only `5 * 5` pixels but if you blow it up it looks like:
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-2.png)
+
+If you want to view these on the machines, go to the start menu, all apps and open **paint.net**. Then us the open menu on **paint.net** to open the file you wish to look at. Remember, these `5 * 5` files are very, very small. Some bigger files are provided in the directory for you to look at.
+
+**Convolution, see [link](https://en.wikipedia.org/wiki/Kernel_(image_processing)) for details.**
