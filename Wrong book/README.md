@@ -108,10 +108,17 @@
 - it is a function and can be invoked like a function
 - is commonly used as part of a generic algorithm
 
+**Sort of True**
+
+- they do not require have a parameter list
+- lambdas can have an argument list, but it is not required
+- Note: function can have an empty parameter list, but you need the parentheses. That is optional with lambdas
+
 **False**
 
 - it has a name
 - it can not be used in a generic algorithm
+- it is a function automatically named lambda
 
 # about C++ constructors
 
