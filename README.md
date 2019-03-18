@@ -18,7 +18,7 @@ The Project 6 [Vector](https://github.com/liutiantian233/CPP-Project/tree/master
 
 The Project 7 [Document Similarity](https://github.com/liutiantian233/CPP-Project/tree/master/Proj07)
 
-The Project 8 [NONE](https://github.com/liutiantian233/CPP-Project/tree/master/Proj08)
+The Project 8 [Image Stuff](https://github.com/liutiantian233/CPP-Project/tree/master/Proj08)
 
 The Project 9 [NONE](https://github.com/liutiantian233/CPP-Project/tree/master/Proj09)
 
