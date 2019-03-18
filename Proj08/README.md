@@ -92,6 +92,4 @@ Again this gets reset to 245, the max gray value.
 
 ## Embedding
 
-adfsgdhfjggkhgdfsgdhfjgk
-
-asdfghjfdsesfgdhj
+We are also going to be doing a little bit of cryptography of a kind slightly different than project 5. We are going to hide information in an image. See [link](https://en.wikipedia.org/wiki/Steganography). We are going to take 2 PGM images, **plain** and **secret** and modify the original **plain** to hide **secret** within. The rules to modify **plain** are as follows.
