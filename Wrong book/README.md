@@ -307,4 +307,4 @@
 
 **False**
 
-- in calling a method the this pointer is assigned by the compiler
+- in calling a method the `this` pointer is assigned by the compiler
