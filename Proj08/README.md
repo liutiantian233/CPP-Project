@@ -32,7 +32,7 @@ A PGM file is a text file with a fairly simple format (see [link](https://en.wik
   - a P5 magic number is the non-ascii version. Do not use one of those!
 - two integers, space separated, that represent respectively the `x_size` and `y_size`, the dimensions, of the image.
 - another integer, also space separated, the `max_gray` that represents the maximum gray value in the image.
-- what follows is, for each row a series of space separated integers in the range 0 to `max_gray`.
+- what follows is, for each row a series of space separated integers in the range `0` to `max_gray`.
   - there are `x_size` values in the row
   - there are `y_size` rows
 - comments can occur anywhere in the file. If so, then the first character of that line is a `#`.
