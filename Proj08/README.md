@@ -87,3 +87,11 @@ We will do the latter. We will treat missing neighbors as 0. For example, for ca
 ![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-7.png)
 
 Again this gets reset to 245, the max gray value.
+
+# Steganography
+
+## Embedding
+
+adfsgdhfjggkhgdfsgdhfjgk
+
+asdfghjfdsesfgdhj
