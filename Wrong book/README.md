@@ -235,12 +235,12 @@ auto foo = []{};  // also empty parameter list lambda, but the parentheses are o
 **True**
 
 - it closes the `cin` stream
+- it clears any errors, resets `cin` to be good
 
 **False**
 
 - it removes all characters from the input stream
 - it undoes the last input operation
-- it clears any errors, resets `cin` to be good
 
 # `string::npos`
 
