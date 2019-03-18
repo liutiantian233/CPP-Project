@@ -50,4 +50,18 @@ It is a very small image only `5 * 5` pixels but if you blow it up it looks like
 
 If you want to view these on the machines, go to the start menu, all apps and open **paint.net**. Then us the open menu on **paint.net** to open the file you wish to look at. Remember, these `5 * 5` files are very, very small. Some bigger files are provided in the directory for you to look at.
 
+# Convolution
+
 **Convolution, see [link](https://en.wikipedia.org/wiki/Kernel_(image_processing)) for details.**
+
+Convolution, at least for images, creates a new single pixel based on some combination of values from its near neighbors and itself. This operation is performed for every pixel in the image.
+
+When you do a convolution, you generate a new image from the old image based on the operations described below.
+
+These operations are represented by a small matrix, called the kernel or convolution mask that represents these neighbor operations. For each pixel, you multiply each old pixel's value by its mask value, including the old pixel itself, and sum all those values up for the new pixel value. For example, let's take our simple image and apply a sharpen mask to the middle pixel with the value 122 (red) against the 8 neighbors (green). We want to calculate the new value for the 122 pixel in a modified image. To do so we use the mask matrix values and multiply the mask value with the appropriate neighbor, including the pixel itself. We sum them all up and that is the new value!
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-3.png)
+
+In row order of the mask, we get the equation:
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-4.png)
