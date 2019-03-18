@@ -114,6 +114,13 @@
 - lambdas can have an argument list, but it is not required
 - Note: function can have an empty parameter list, but you need the parentheses. That is optional with lambdas
 
+```c++
+int foo() {};  // empty parameter list function
+int foo {};  // this compiles, but is a variable of type int, NOT a function
+auto foo = [](){};  // empty parameter list lambda
+auto foo = []{};  // also empty parameter list lambda, but the parentheses are optional
+```
+
 **False**
 
 - it has a name
