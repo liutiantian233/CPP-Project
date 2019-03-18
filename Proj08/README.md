@@ -69,3 +69,21 @@ In row order of the mask, we get the equation:
 The new pixel in the new image at the same location of the old pixel will have the value 488. But wait! 488 is larger than the `max_gray` we indicated in the file. So that new pixel's value gets reset to the `max_gray`, 245. If the calculated new pixel had been less than 0, we would have set it to 0.
 
 We do this for every pixel, calculating a new pixel value based on the old pixel's neighbors and a convolution mask. The result is a new image. You can imagine sliding the mask along the original image one pixel at a time, doing the calculation and then generating a new pixel in a new image. A great web site that demonstrates this process is [link](http://setosa.io/ev/image-kernels/). Take a look!
+
+# The edges
+
+What to do on the edges of an image? Pixels on an edge do not have the required number of neighbors to make the calculation. We have choices on how to handle this:
+
+- shrink the image, so that we only calculate new pixels not on the image border.
+- wrap the image, so that values on the opposite edge fill in.
+- just treat the missing neighbors as 0.
+
+We will do the latter. We will treat missing neighbors as 0. For example, for calculating the new pixel for 183 (where the bolded values of 0 are the image value for missing neighbors) in row order.
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-5.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-6.png)
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-7.png)
+
+Again this gets reset to 245, the max gray value.
