@@ -131,3 +131,11 @@ Note that some information is lost in this process. We create **extracted** as e
 # Problem Statement
 
 You are going to create an `Image struct` that will allow you to read, write, convolve (in various ways), embed and subsequently extract a PGM image.
+
+# Image struct
+
+- `Image()`: default constructor is in the header and takes the C++ default
+- `Image(string f_name)`: constructor, reads in the PGM file into the class instance. It:
+  - sets the `max_value`, `height_` and `width_` given in the file.
+  - it then reads in every individual pixel value into the `vector<vector<long>> v_`. More on that in the notes section.
+- `void write_image(string f_name)`: method, writes out the contents of the class instance into the given file as a properly configured PGM file. If you write it, you should be able to read it back in and view it using **paint.net**.
