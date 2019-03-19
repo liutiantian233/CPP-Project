@@ -132,6 +132,10 @@ Note that some information is lost in this process. We create **extracted** as e
 
 You are going to create an `Image struct` that will allow you to read, write, convolve (in various ways), embed and subsequently extract a PGM image.
 
+# Program Specifications
+
+You will be provided with a proj08-struct.h to start with but you can modify that file as long as the basic types for the listed function members are maintained. You must provide both the resulting proj08-struct.cpp and the proj08-struct.h file. I will also provide some sample PGM images so you can see the results of your work better.
+
 # Image struct
 
 - `Image()`: default constructor is in the header and takes the C++ default
@@ -139,3 +143,4 @@ You are going to create an `Image struct` that will allow you to read, write, co
   - sets the `max_value`, `height_` and `width_` given in the file.
   - it then reads in every individual pixel value into the `vector<vector<long>> v_`. More on that in the notes section.
 - `void write_image(string f_name)`: method, writes out the contents of the class instance into the given file as a properly configured PGM file. If you write it, you should be able to read it back in and view it using **paint.net**.
+- `Image convolve(vector<vector<long>> mask, long divisor = 1, long whiten = 0)`: method. Note that `div` and `whiten` should have defaults in the header file but **should not** be provided in the class cpp file (it's a compile error if you do). This is the guts of the whole thing. This creates in a `new_image` (the one that you write into) using the provided `mask` which is the convolution mask. You apply the mask to the old image, setting the new pixels in the new image by passing the mask over all the pixels in the old image (the one the `this` pointer points to) and doing the calculation as described. The `new_image` is returned from the function.
