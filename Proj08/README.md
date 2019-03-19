@@ -171,3 +171,26 @@ You will be provided with a proj08-struct.h to start with but you can modify tha
 
 - `void embed(const Image& secret)`: method. Takes the **secret** image by `const&`, and embeds it in the **plain** image (the object on which it is called).
 - `Image extract(long max_value)`: method. This function returns an image which is extracted from the pixels in the calling object (referred to by the `this` pointer). The `max_value` of this image is set to `max_value`, and the dimensions are the same as the called image object. Values of pixels in the resulting image are either `0` or `max_value`.
+
+# Assignment notes
+
+1. Get the reading and writing of Images done first (along with the constructors). Nothing is going to work until you get those two operations working.
+2. Do your work locally on really small images that you can calculate by hand to make sure things are working. All the images, both input and correct output, are provided so you can see what the images should look like.
+3. The convolution masks and potentially alternate values for `div` and `white`, are preset. Use them!
+4. **2D Vectors and Images**: This is discussed in the slides, but the coordinate system can get a little wonky and you have to keep track. Let's use the `vector<vector<long>> v_`, which contains the grayscale image pixels. You would:
+   1. create a `vector<long> temp`, make sure you `temp.clear()` before each use, and `push_back` each long from a row onto `temp`. You know how big a row is so you know how many to read.
+   2. `temp` now has one row of values, you `push_back` the whole row onto `v_`.
+   3. you do that for all the rows and you know how many rows there are.
+   4. you can now talk about a particular pixel at `v_[0][0]` (or any other legal index), but where is that in the image? That location is **top**, **left** of the image. Furthermore, the indexing is actually `v_[y][x]` (not `[x][y]`) as you might expect) because `v_[y]` is actually a whole row and `v_[y][x]` is a particular column in that row. Furthermore, as y **grows you go down** the image and as x grows you go to the right.
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-16.png)
+
+-----
+
+## Feedback and suggestions
+
+- E-mail：<liutia20@msu.edu>
+
+---------
+
+Thanks for reading this help document
