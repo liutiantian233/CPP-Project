@@ -139,8 +139,35 @@ You will be provided with a proj08-struct.h to start with but you can modify tha
 # Image struct
 
 - `Image()`: default constructor is in the header and takes the C++ default
+
 - `Image(string f_name)`: constructor, reads in the PGM file into the class instance. It:
   - sets the `max_value`, `height_` and `width_` given in the file.
   - it then reads in every individual pixel value into the `vector<vector<long>> v_`. More on that in the notes section.
+
 - `void write_image(string f_name)`: method, writes out the contents of the class instance into the given file as a properly configured PGM file. If you write it, you should be able to read it back in and view it using **paint.net**.
+
 - `Image convolve(vector<vector<long>> mask, long divisor = 1, long whiten = 0)`: method. Note that `div` and `whiten` should have defaults in the header file but **should not** be provided in the class cpp file (it's a compile error if you do). This is the guts of the whole thing. This creates in a `new_image` (the one that you write into) using the provided `mask` which is the convolution mask. You apply the mask to the old image, setting the new pixels in the new image by passing the mask over all the pixels in the old image (the one the `this` pointer points to) and doing the calculation as described. The `new_image` is returned from the function.
+  - if any new pixel calculation is greater than `max_value`, that pixel is set to `max_value` in the new image.
+  - if any new pixel calculation is less than `0`, that pixel is set to `0` in the new image.
+  - for each pixel calculation, the total value of the pixel calculation is divided by the parameter `divisor` (see the blur method).
+  - for each pixel calculation, the parameter `whiten` is added the total value of the pixel calculation (see the `edge_detect` method).
+  - as stated, unavailable neighbors are assumed to be 0 for edge pixels.
+
+- `Image sharpen()`: method. Applies the `3 * 3` mask below to create the new image. Calls `convolve`. When calling `convolve`, it takes defaults on `div` and `whiten`. It returns a new `Image`.
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-12.png)
+
+- `Image edge_detect()`: method. Applies the `3 * 3` mask below to create the new image. Calls `convolve`. When calling `convolve`, it takes defaults on `divisor` but the image tends to be dark so it provides a `whiten` to brighten the resulting `Image`. Use `whiten = 50`. It returns a new `Image`.
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-13.png)
+
+- `Image blur()`: method. Applies the `3 * 3` mask below to create the new image. Calls `convolve`. When calling `convolve`, it takes defaults on `whiten` but mask always overshoots the `max_value`. To compensate we provide a `divisor = 9` (to normalize the result, averaging the pixel across its 8 neighbors). It returns a new Image.
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-14.png)
+
+- `Image emboss()`: method. Applies the `3 * 3` mask below to create the new image. Calls `convolve`. When calling `convolve`, it takes defaults on `divisor` and `whiten`. It returns a new `Image`.
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-15.png)
+
+- `void embed(const Image& secret)`: method. Takes the **secret** image by `const&`, and embeds it in the **plain** image (the object on which it is called).
+- `Image extract(long max_value)`: method. This function returns an image which is extracted from the pixels in the calling object (referred to by the `this` pointer). The `max_value` of this image is set to `max_value`, and the dimensions are the same as the called image object. Values of pixels in the resulting image are either `0` or `max_value`.
