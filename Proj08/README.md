@@ -114,3 +114,20 @@ And an example **secret** image.
 The result of embedding the **secret** image in the **encoded** image is
 
 ![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-10.png)
+
+## Extracting
+
+We can extract the **secret** image embedded in the modified **plain** image fairly straightforwardly. We create a new image (let's call it **extracted**) as follows:
+
+1. We create a new image with the column and row values of **plain**.
+2. For each pixel in **plain** we examine its parity:
+   1. if the parity of the **plain** pixel is odd, we write the provided `max_value` as the corresponding pixel of the **extracted** image.
+   2. if the parity of the **plain** pixel is even, we write 0 as the corresponding pixel of the **extracted** image.
+
+Note that some information is lost in this process. We create **extracted** as essentially a black and white value image (it has only two pixel values, `0` and `max_value` at each pixel) even though **secret** may have a broader set of values (more gray values). Further, if **plain** was larger than **secret** there will be corresponding noise in the **extracted** image. Not random noise, but pixels set to values that are not relevant to **secret**.
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-11.png)
+
+# Problem Statement
+
+You are going to create an `Image struct` that will allow you to read, write, convolve (in various ways), embed and subsequently extract a PGM image.
