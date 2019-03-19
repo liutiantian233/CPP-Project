@@ -93,3 +93,24 @@ Again this gets reset to 245, the max gray value.
 ## Embedding
 
 We are also going to be doing a little bit of cryptography of a kind slightly different than project 5. We are going to hide information in an image. See [link](https://en.wikipedia.org/wiki/Steganography). We are going to take 2 PGM images, **plain** and **secret** and modify the original **plain** to hide **secret** within. The rules to modify **plain** are as follows.
+
+1. We assume that **secret** is the same size or smaller than **plain**.
+2. We also assume that **secret** (when extracted from **plain**) will be visible as a black and white image. That is, once **secret** is embedded what we can extract is a black and white image.
+3. We examine each pixel in **secret** and modify the corresponding pixel (row and column) of **plain** as follows:
+   1. If the corresponding pixel from the **secret** image is 0, then the parity of the corresponding **plain** pixel must be set to even.
+      1. If the **plain** pixel is already even, then it is not modified otherwise the **plain** pixel is updated to its original value - 1 so that it is even.
+   2. If the **secret** pixel is non-0, then the parity of the corresponding **plain** pixel must be set to odd.
+      1. If it's already odd, then the corresponding pixel of **plain** is not modified otherwise the **plain** pixel is updated to its original value + 1 so that it is odd.
+      2. Of course, we have to ensure that the `max_value` of the **plain** image is preserved, so if the **plain** pixel is already at `max_value`, then 1 is subtracted.
+
+Here is an example **plain** image.
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-8.png)
+
+And an example **secret** image.
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-9.png)
+
+The result of embedding the **secret** image in the **encoded** image is
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj08/Proj08-10.png)
