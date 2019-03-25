@@ -100,3 +100,75 @@ Should use `find_keys`. The cases are:
 `friend ostream& operator << (ostream&, MVM&)`
 
 - print an `MVM`.
+
+# Assignment Notes
+
+## Element operator ==
+
+You have to get this one right! Do it first. Nothing will work without it so check it. It is not that hard.
+
+## lower_bound
+
+Your new favorite algorithm should be `lower_bound`. Look it up. It returns an iterator to the **first** `Element` in a container that is **not less than** (that is, greater than or equal to) the provided search value. It requires that the container `Elements` be in **sorted order**, and if so does a fast search (a binary search) to find the search value. It has the following form:
+
+`lower_bound(container.begin(), container.end(), value_to_search_for)`
+
+or
+
+`lower_bound(container.begin(), container.end(), value_to_search_for, binary_predicate)`
+
+where the `binary_predicate` takes 2 arguments: the first an `Element` of the container and the second the `value_to_search_for`. It returns true if the `Element` of the container is less than `value_to_search_for`. Remember, less than of `Element` is by `key_`.
+
+The return value is an iterator to the either the `Element` in the container that meets the criteria, or the value of the last `Element` in the range searched (in this case, `container.end()`)
+
+That means that either:
+
+- the `value_to_search_for` is already in the container and the iterator points to it.
+- `value_to_search_for` is not in the container. Not in the container means:
+  - the iterator points to a value **just greater** than the 	`value_to_search_for`.
+  - the iterator points to `container.end()`.
+
+## Why lower_bound instead of a loop?
+
+Why not just use a loop to look for a key or value? Because on a sorted list `lower_bound` is very efficient. It does a binary search. If you are a Price-is-Right fan this is the search you should use in the Hi-Lo game. Look at the diagram below.
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Project/master/Proj09/Proj09-2.png)
+
+if the elements are sorted, you can find the value quickly or discover it is not there. This is what `lower_bound` does on a sorted list for a search. We want to be efficient so we require that:
+
+- when you add an `Element`, you put it in the location it would go if is sorted key order (no sorting).
+- if already in sorted order, `lower_bound` is more efficient than a loop through every `Element`.
+
+### vector insert
+
+Very conveniently, you can do an insert on a vector. You must provide an iterator and a value to insert. The insert method places the new value **in front of** the iterator. In collaboration with `lower_bound`, you can place an `Element` in a vector at the location you wish, maintaining sorted order at every insert.
+
+### add
+
+The critical method is `add`. Get that right first and then much of the rest is easy. For example, the initializer list constructor can then use `add` to put `Elements` into the vector at the correct location (in sorted order).
+
+### sort
+
+No use of sort allowed. If you use sort in a test case you will get 0 for that test case. Do a combination of `lower_bound` and vector insert to get an `Element` where it needs to be in a vector.
+
+### Empty strings
+
+Since empty strings are used to indicate values not found, none of the valid keys or values stored in the `MVM` will be empty.
+
+### private VS public
+
+You will note that all elements in the class are public. We do this to make testing easier. Any public part can be accessed in a main program which is convenient. The parts that should be private are marked. In particular `data_` and the `find_value` and `find_key` members should probably be private.
+
+### initializer_list ctor
+
+It should be the case that the `Elements` in the `initializer_list` ctor should insert into the `MVM` in key order using `add`. However, that again makes testing harder (can not set up a simple `MVM` without getting `add` to work, and it is the most work). Thus we allow you to write the `initializer_list` ctor to put `Elements` into the `MVM` in the order of the list `Elements`. We will guarantee for our testing that anytime we use the `initializer_list` ctor we will start out with `Elements` in key order. After that maintaining that order will be up to you.
+
+-----
+
+## Feedback and suggestions
+
+- E-mail：<liutia20@msu.edu>
+
+---------
+
+Thanks for reading this help document
