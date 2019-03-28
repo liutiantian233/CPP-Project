@@ -309,6 +309,10 @@ auto foo = []{};  // also empty parameter list lambda, but the parentheses are o
 **True**
 
 - they use iterators to work with a container
+
+
+**False**
+
 - they must be templated to work with the container type
 - they are often not very efficient, but they are convenient
 
@@ -319,6 +323,6 @@ auto foo = []{};  // also empty parameter list lambda, but the parentheses are o
 - a method can be part of a `struct`
 - it is called in the context of an object using a dot call
 
-**False**
+**Maybe**
 
 - in calling a method the `this` pointer is assigned by the compiler
