@@ -26,6 +26,6 @@ We provide a header file, `array.h`, which provides details of type for all the 
 
 Remember, everything is public, not because it is a good idea but because it is easier to test your code that way.
 
-# `Element<K, V>`
+# Element<K, V>
 
 ## Member functions re-used from project 09:
