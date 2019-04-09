@@ -29,7 +29,7 @@ public:
     size_t count_ = 0;
     Element() = default;
 
-    Element(K, initializer_list<V>);
+    Element(K key, initializer_list<V> values);
     bool operator == (const Element&) const;
     bool operator < (const K&) const;
 
@@ -50,8 +50,8 @@ public:
     size_t num_keys_ = 0;
     size_t num_elements_ = 0;
 
-    Element<K, V> * find_key(K);
-    size_t find_value(V, K*&);
+    Element<K, V> * find_key(K key);
+    size_t find_value(V values, K* (&keys_found));
     void grow();
 
 public:
@@ -59,13 +59,13 @@ public:
     MVM() = default;
 
     MVM(initializer_list<Element<K, V>>);
-    MVM(const MVM&);
+    MVM(const MVM& other);
     ~MVM();
     size_t size();
 
     bool add(K, V);
-    bool remove_key(K);
-    size_t remove_value(V, K*&);
+    bool remove_key(K key);
+    size_t remove_value(V value, K* (&keys_found));
     friend ostream& operator << (ostream& oss, MVM& mvm) {
         // Code for the ostream operator goes here
     }
