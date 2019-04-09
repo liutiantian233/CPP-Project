@@ -59,3 +59,21 @@ Remember, everything is public, not because it is a good idea but because it is 
 `MVM() = default`
 
 - Default ctor. Do not need to write.
+
+`MVM(initializer_list<Element<K, V>>)`
+
+- Behavior is identical to the previous project. Must properly allocate `data_`, and initialize `num_keys_` and `num_elements_`.
+
+`Element<K, V> * find_key(K key)`
+
+- Behavior is identical to previous project but returns a pointer (not an iterator) to an `Element` (or one past the last `Element` if not found)
+
+`size_t find_value(V values, K* (&keys_found))`
+
+- We pass a `values` to search for and an array reference `keys_found` (note the odd parentheses). The intent is to fill the array `keys_found` with all keys containing the `values`.
+- We assume that `keys_found` starts with the value `nullptr`. This is because `find_value` will create the array dynamically and fill it with the found keys.
+  - If `keys_found` is not a `nullptr`, throws a `runtime_error`.
+- finds all keys where `values` is located.
+- creates a dynamic array pointed to by `keys_found` that holds the keys that have `values` in their `values_` array.
+- returns the size of the array pointed to by `keys_found`.
+- NOTE: `keys_found` is passed in as a parameter (as opposed to being part of the function return) to signify that the memory management is to be handled by the calling function. This is not necessarily best practices, but is intended to give you practice in managing dynamic memory.
