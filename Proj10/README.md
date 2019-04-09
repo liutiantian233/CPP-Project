@@ -29,3 +29,33 @@ Remember, everything is public, not because it is a good idea but because it is 
 # Element<K, V>
 
 ## Member functions re-used from project 09:
+
+`Element() = default`
+
+- Default ctor. Do not need to write.
+
+`Element(K key, initializer_list<V> values)`
+
+- Instead of copying into the vector, copy into the array `values_` and set `count_` correctly. The number of elements being copied will never exceed the fixed size of `values_`.
+
+`bool operator == (const Element&) const`
+
+- Behavior is identical to the previous project. Must properly set up `count_`.
+
+`friend ostream& operator << (ostream& oss, Element& element)`
+
+- Behavior is identical to the previous project.
+
+## New member functions for project 10:
+
+`bool operator < (const K&) const`
+
+- Optional; compares the key passed to an `Elements` key; done correctly, allows easier use of the `lower_bound` algorithm.
+
+# MVM<K, V>
+
+## Member functions re-used from project 09:
+
+`MVM() = default`
+
+- Default ctor. Do not need to write.
