@@ -77,3 +77,85 @@ Remember, everything is public, not because it is a good idea but because it is 
 - creates a dynamic array pointed to by `keys_found` that holds the keys that have `values` in their `values_` array.
 - returns the size of the array pointed to by `keys_found`.
 - NOTE: `keys_found` is passed in as a parameter (as opposed to being part of the function return) to signify that the memory management is to be handled by the calling function. This is not necessarily best practices, but is intended to give you practice in managing dynamic memory.
+
+`bool add(string key, string value)`
+
+- Behavior is identical to previous project, with the following exception:
+- If you are adding a new key to the `MVM`, and the dynamic array is full (i.e. `num_keys_ == num_elements_`), you need to call the `grow()` function to make `data_` bigger.
+
+`size_t size()`
+
+- Returns `num_keys_`
+
+`bool remove_key(K key)`
+
+- Behavior is identical to previous project.
+
+`size_t remove_value(V value, K* (&keys_found))`
+
+- Again, `keys_found` is an array reference assumed to start as a `nullptr`. `remove_value` will create the array of keys where the value was removed dynamically and `keys_found` will point to that array.
+  - Like before, if `keys_found` is not a `nullptr`, throws a `runtime_error`.
+- finds all keys where `value` is located, and removes `value` from the `values_` array.
+- creates a dynamic array pointed to by `keys_found` that holds the keys that had `value` in their `values_` array.
+- returns the size of the array pointed to by `keys_found`.
+- Hint: use the `find_value` function to handle most of the work.
+- NOTE: `keys_found` is passed in as a parameter (as opposed to being part of the function return) to signify that the memory management is to be handled by the calling function. This is not necessarily best practices, but is intended to give you practice in managing dynamic memory.
+
+`friend ostream& operator << (ostream& oss, MVM& mvm)`
+
+- Behavior is identical to previous project.
+
+## New member functions for project 10:
+
+`MVM(const MVM& other)`
+
+- Copy ctor. Constructs a new `MVM` with its own dynamically allocated memory that is a copy of `other`.
+
+`~MVM()`
+
+- Destructor. Deletes any allocated memory as necessary.
+
+`void grow()`
+
+- If the array is empty (i.e. `num_elements_` is 0 and `data_` is a `nullptr`) set the `num_elements_` to 2 and dynamically allocate `data_` to be of size 2.
+- Otherwise, reallocate `data_` with twice as many `num_elements_` and the correct keys stored internally, taking care to manage the dynamically allocated memory correctly.
+
+# Assignment Notes
+
+`Element operator ==`
+
+You have to get this one right! Do it first. Nothing will work without it so check it. It isn't that hard. Be sure to take into account `num_elements_` and `num_keys_`.
+
+`lower_bound`
+
+Because pointers are functionally similar to iterators, we can use `lower_bound` in a near-identical way to the previous project.
+
+`add`
+
+The critical method is `add`. Get that right first and then much of the rest is easy. For example, the initializer list constructor can then use `add` to put `Elements` into the vector at the correct location (in sorted order).
+
+`sort`
+
+No use of sort allowed. If you use sort in a test case you will get 0 for that test case. Do a combination of `lower_bound` and vector insert to get an `Element` where it needs to be in a vector.
+
+`private vs public`
+
+You will note that all elements in the class are public. We do this to make testing easier. Any public part can be accessed in a main program which is convenient. The parts that should be private are marked. In particular the member variables `data_`, `num_keys`, and `num_elements_` and the member functions `grow`, `find_value`, and `find_key` should probably be private.
+
+`initializer_list ctor`
+
+It should be the case that the Elements in the `initializer_list` ctor should insert into the `MVM` in key order using `add`. However, that again makes testing harder (can't set up a simple `MVM` without getting `add` to work, and it is the most work). Thus we allow you to write the `initializer_list` ctor to put Elements into the `MVM` in the order of the list `Elements`. We will guarantee for our testing that anytime we use the `initializer_list` ctor we will start out with `Elements` in key order. After that maintaining that order will be up to you.
+
+`main`
+
+The main program is responsible for `delete`-ing memory from either `find_value` or `remove_value`. This is not the best approach. A class should allocate and deallocate memory, thus only one element having that responsibility. Nonetheless, for simplicity we allocate in the member functions and pass that pointer to the main program. Thus the main program does the `delete []` of the memory.
+
+-----
+
+## Feedback and suggestions
+
+- E-mail：<liutia20@msu.edu>
+
+---------
+
+Thanks for reading this help document
