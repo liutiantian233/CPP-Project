@@ -69,6 +69,7 @@ public:
     K key_;
     V values_[element_array_size];
     size_t count_ = 0;
+    
     Element() = default;
     Element(K key, initializer_list<V> values);
     bool operator == (const Element&) const;
@@ -105,6 +106,7 @@ bool Element<K, V>::operator == (const Element &element) const {
     // if key is element and count
     if (key_ == element.key_ and count_ == element.count_) {
         for (auto i = 0; i < count_; ++i)
+            
             if (values_[i] != element.values_[i])
                 return false;
         return true;
@@ -138,7 +140,6 @@ public:
     // Define all functions
     MVM() = default;
     MVM(initializer_list<Element<K, V>>);
-    MVM(const MVM& other);
     ~MVM();
     size_t size();
     bool add(K, V);
@@ -211,7 +212,7 @@ size_t MVM<K, V>::find_value(V values, K* (&keys_found)) {
         keys_found = new K [count];
         for (auto i = 0; i < num_keys_; ++i)
             for (auto j = 0; j < data_[i].count_; ++j)
-                
+
                 if (data_[i].values_[j] == values)
                     // creates a dynamic array pointed to by keys_found that holds
                     // the keys that have values in their values_ array.
@@ -247,7 +248,7 @@ bool MVM<K, V>::add(K key, V value) {
     if (find_key(key) != data_ + num_elements_) {
         if (find_key(key)->key_ == key) {
             auto f = std::find(find_key(key)->values_, find_key(key)->values_ + find_key(key)->count_, value);
-            
+
             if (f != find_key(key)->values_ + find_key(key)->count_ or find_key(key)->count_ == element_array_size)
                 return false;
             find_key(key)->values_[find_key(key)->count_++] = value;
@@ -266,13 +267,6 @@ bool MVM<K, V>::add(K key, V value) {
         data_[num_keys_++] = element;
     }
     return true;
-}
-
-template <typename K, typename V>
-MVM<K, V>::MVM(const MVM &other) {
-    other = new initializer_list<Element<K, V>> [num_elements_];
-    // Copy ctor. Constructs a new MVM with its own dynamically allocated memory that is a copy of other
-    copy(data_, data_ + num_elements_, other);
 }
 
 template <typename K, typename V>
@@ -297,18 +291,20 @@ size_t MVM<K, V>::remove_value(V value, K* (&keys_found)) {
     if (keys_found == nullptr) {
         for (auto i = 0; i < num_keys_; ++i)
             // use the find function to handle most of the work.
+            
             if (std::find(data_[i].values_, data_[i].values_ + data_[i].count_, value)
             != data_[i].values_ + data_[i].count_)
                 count += 1;
     } else
         // Like before, if keys_found is not a nullptr, throws a runtime_error.
         throw runtime_error("NOT NULL");
+    
     if (count != 0 and result < count) {
         keys_found = new K [count];
         for (auto i = 0; i < num_keys_; ++i)
             for (auto j = 0; j < data_[i].count_; ++j)
                 if (data_[i].values_[j] == value) {
-                    
+
                     std::rotate(data_[i].values_ + j + 1, data_[i].values_ + j + 2, data_[i].values_ + data_[i].count_);
                     data_[i].count_ -= 1;
                     // creates a dynamic array pointed to by keys_found that
