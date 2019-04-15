@@ -82,3 +82,70 @@ Much of this remains the same, but we add a new data member `next_`. The data me
 `MVM find_value(V value)`
 
 - finds all keys where value is located.
+- creates an `MVM` where each key is a key that has `value` in its `values_`, and the only value associated with each key is `value`.
+- returns the new `MVM`.
+
+`bool add(string key, string value)`
+
+- Behavior is identical to previous project, with the exception being that you no longer need to call `grow()`, just dynamically allocate a new Element as necessary.
+
+`size_t size()`
+
+- Returns `num_keys_`.
+
+`bool remove_key(K key)`
+
+- Behavior is identical to previous project.
+
+`size_t remove_value(V value, K* (&keys_found))`
+
+- finds all keys where `value` is located, and removes `value` from the `values_` array.
+- creates and returns a `MVM` of the same format used in `find_value`.
+- Hint: use the `find_value` function to handle most of the work.
+
+`friend ostream& operator << (ostream&, MVM&)`
+
+- Behavior is identical to previous project.
+
+**New functions for project 11:**
+
+`MVM& operator = (const MVM& other)`
+
+- Makes this have the same values as other.
+- Hint: use the copy ctor to make a copy of other that you can then use to swap data members with the local `MVM`.
+
+# Assignment Notes
+
+## Element operator==
+
+You have to get this one right! Do it first. Nothing will work without it so check it. It isn't that hard. Be sure to take into account `num_elements_`, and `num_keys_`.
+
+## no more lower_bound
+
+As we are using a linked list to store the `MVM`, we can no longer use `lower_bound`. However, we still require the Elements to be stored in sorted order for consistency.
+
+## add
+
+The critical method is `add`. Get that right first and then much of the rest is easy. For example, the initializer list constructor can then use `add` to put `Elements` into the vector at the correct location (in sorted order)
+
+## sort
+
+No use of sort allowed and it wouldn't work anyway as mentioned. Use `find_key` to get an `Element` where it needs to be in the linked list.
+
+## private vs public
+
+You will note that all elements in the class are public. We do this to make testing easier. Any public part can be accessed in a main program which is convenient. The parts that should be private are marked. In particular the member variables `data_` and `num_keys_` and the member functions `find_value` and `find_key` should probably be private.
+
+## initializer_list ctor
+
+It should be the case that the Elements in the `initializer_list` ctor should insert into the `MVM` in key order using `add`. However, that again makes testing harder (can't set up a simple `MVM` without getting `add` to work, and it is the most work). Thus we allow you to write the `initializer_list` ctor to put Elements into the `MVM` in the order of the list `Elements`. We will guarantee for our testing that anytime we use the `initializer_list` ctor we will start out with `Elements` in key order. After that maintaining that order will be up to you.
+
+-----
+
+## Feedback and suggestions
+
+- E-mail：<liutia20@msu.edu>
+
+---------
+
+Thanks for reading this help document
