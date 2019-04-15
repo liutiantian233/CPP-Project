@@ -75,9 +75,14 @@ Much of this remains the same, but we add a new data member `next_`. The data me
 
 - We can no longer use `lower_bound` as we mentioned.
 - However, having a singly linked list means that finding only the first greater value is of limited use.
-- Thus we change the return value to be an STL `pair` of pointers, the first of which points to the first `Element` whose `key_` is either equal to or just greater than the parameter key, and the second of which points to the `Element` just behind (just previous to) the first `Element`.
+- Thus we change the return value to be an STL `pair` of pointers:
+  - the `.second` points to the `Element` whose `key_` is either equal to or just greater than the parameter key.
+  - the `.first` points to the `Element` just behind (just previous to) the `Element` pointed to by `.second`
 - This return behavior should help you to link/add and unlink/remove items from the linked list.
-- If there is no smaller `Element`, return a `nullptr` for the first part of the pair. If there is no greater or equal `Element`, return a `nullptr` as the second part of the pair. If the list is empty, return a pair with both values being `nullptr`.
+- Given a key to search for:
+  - If there is no `Element` with a smaller `.key_`, return a `nullptr` for the `.first` of the pair.
+  - If there is no `Element` with a `.key_` that is greater or equal, return a `nullptr` as the `.second` of the pair.
+  - If the list is empty, return a pair with both values being `nullptr`.
 
 `MVM find_value(V value)`
 
