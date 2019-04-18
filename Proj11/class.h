@@ -107,7 +107,7 @@ public:
 
     // Rule of Three
     // MVM(const MVM& other);
-    MVM& operator = (const MVM& other);
+    // MVM& operator = (const MVM& other);
     ~MVM();
 
     // Other Functions
@@ -172,11 +172,12 @@ pair<Element<K, V>*, Element<K, V>*> MVM<K, V>::find_key(K key) {
 template <typename K, typename V>
 MVM<K, V> MVM<K, V>::find_value(V value) {
     MVM<K, V> mvm;
+    auto * point = data_head_;
     for (auto i = 0; i < num_keys_; ++i) {
-        for (auto j = 0; j < data_head_->count_; ++j) {
-            if (data_head_->values_[j] == value) {
+        for (auto j = 0; j < point->count_; ++j) {
+            if (point->values_[j] == value) {
                 mvm.num_keys_ += 1;
-                auto * point1 = new Element<K, V> (data_head_->key_, {value});
+                auto * point1 = new Element<K, V> (point->key_, {value});
                 if (mvm.data_head_ == nullptr)
                     mvm.data_head_ = point1;
                 else {
@@ -187,7 +188,7 @@ MVM<K, V> MVM<K, V>::find_value(V value) {
                 }
             }
         }
-        data_head_ = data_head_->next_;
+        point = point->next_;
     }
     return mvm;
 }
@@ -266,6 +267,28 @@ bool MVM<K, V>::remove_key(K key) {
         return true;
     }
     return false;
+}
+
+template <typename K, typename V>
+MVM<K, V> MVM<K, V>::remove_value(V value) {
+    auto * point1 = data_head_;
+    auto mvm = find_value(value);
+    auto * point2 = mvm.data_head_;
+    for (auto i = 0; i < num_keys_; ++i) {
+        if (point2 == nullptr)
+            break;
+        if (point1->key_ == point2->key_) {
+            for (auto j = 0; j < point1->count_; ++j) {
+                if (point1->values_[j] == value) {
+                    std::rotate(point1->values_ + j, point1->values_ + j + 1, point1->values_ + point1->count_);
+                    point1->count_ -= 1;
+                }
+            }
+            point2 = point2->next_;
+        }
+        point1 = point1->next_;
+    }
+    return mvm;
 }
 
 #endif //PROJECT11_CLASS_H
