@@ -102,7 +102,7 @@ Much of this remains the same, but we add a new data member `next_`. The data me
 
 - Behavior is identical to previous project.
 
-`MVM remove_value(V value);`
+`MVM remove_value(V value)`
 
 - finds all keys where `value` is located, and removes `value` from the `values_` array.
 - creates and returns a `MVM` of the same format used in `find_value`.
