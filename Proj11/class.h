@@ -182,6 +182,7 @@ public:
 template <typename K, typename V>
 MVM<K, V>::MVM(const MVM &other) {
     num_keys_ = other.num_keys_;
+    // if the data_head_ not nullptr, need to delete
     if (data_head_ != nullptr) {
         auto * point = data_head_;  // make a point to data_head_
         num_keys_ = 0;
@@ -195,11 +196,17 @@ MVM<K, V>::MVM(const MVM &other) {
         data_head_ = nullptr;
         data_tail_ = nullptr;
     }
+    
+    // if other.data_head_ not nullptr, need the copy
     if (other.data_head_ != nullptr) {
         data_head_ = new Element<K,V> (*(other.data_head_));
+        
+        // make the point to data_head_ and other.data_head_
         auto * point1 = data_head_;
         auto * point2 = other.data_head_;
         data_tail_ = point1;
+        
+        // while loop to get other.data_head_ next.
         while (point2->next_ != nullptr) {
             data_tail_ = point1;
             point1 = new Element<K,V> (*(point2->next_));
@@ -208,6 +215,8 @@ MVM<K, V>::MVM(const MVM &other) {
         }
         data_tail_ = point1;
     } else {
+        
+        // data_head_ and data_tail_ is nullptr
         data_head_ = nullptr;
         data_tail_ = nullptr;
     }
@@ -366,6 +375,8 @@ MVM<K, V> MVM<K, V>::remove_value(V value) {
     for (auto i = 0; i < num_keys_; ++i) {
         if (point2 == nullptr)
             break;
+        
+        // if point1->key_ same with point2->key_
         if (point1->key_ == point2->key_) {
             for (auto j = 0; j < point1->count_; ++j) {
                 if (point1->values_[j] == value) {
